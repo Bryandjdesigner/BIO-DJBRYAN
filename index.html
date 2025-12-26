@@ -21,11 +21,21 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .animate-float {
-            animation: float 6s ease-in-out infinite;
+            animation: float 10s ease-in-out infinite;
+        }
+        .animate-rotate-slow {
+            animation: rotate 8s linear infinite;
         }
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .neon-border {
+            background: conic-gradient(from 0deg, #9333ea, #22c55e, #3b82f6, #9333ea);
         }
     </style>
 <script type="importmap">

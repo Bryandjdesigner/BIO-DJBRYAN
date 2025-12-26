@@ -4,16 +4,19 @@ import { ArtistProfile } from './types';
 
 // Greeting message for the pre-filled WhatsApp link
 const WHATSAPP_MESSAGE = encodeURIComponent("Olá DJ BRYAN! Vi seu perfil no Bio DJBRYAN e gostaria de entrar em contato para saber mais sobre seu trabalho.");
+const YOUTUBE_MUSIC_URL = "https://music.youtube.com/channel/UC3Q9KvTNrxwm3byUREgNAvA";
+const TIKTOK_URL = "https://www.tiktok.com/@djbryanclub?_r=1&_t=ZS-92Xgzr5vz84";
+const SOUNDCLOUD_URL = "https://soundcloud.com/djbryanclub?ref=clipboard&p=a&c=1&si=0cbfc258d84c4f30a3210f31236e322b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing";
 
 export const MOCK_ARTIST: ArtistProfile = {
   name: "DJ BRYAN",
   bio: "O melhor do Funk, Eletro e Open Format. Transformando sua noite em uma experiência inesquecível.",
-  profileImage: "https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=400&h=400&auto=format&fit=crop",
+  profileImage: "https://i.imgur.com/QuFtKgY.png",
   coverImage: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=1200&h=800&auto=format&fit=crop",
   featuredRelease: {
     title: "DJ BRYAN",
     type: "Novo Set / Single",
-    artwork: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&h=600&auto=format&fit=crop",
+    artwork: "https://i.imgur.com/fbbLk64.png",
     spotifyEmbedUrl: "https://open.spotify.com/embed/track/32xPLSqoGN6bng8gLyJdpL"
   },
   links: [
@@ -32,6 +35,13 @@ export const MOCK_ARTIST: ArtistProfile = {
       color: "hover:bg-[#1DB954]"
     },
     {
+      id: "soundcloud",
+      platform: "SoundCloud",
+      url: SOUNDCLOUD_URL,
+      icon: "soundcloud",
+      color: "hover:bg-[#FF3300]"
+    },
+    {
       id: "2",
       platform: "Apple Music",
       url: "https://music.apple.com/br/artist/djbryan/1858000514?ls",
@@ -41,8 +51,8 @@ export const MOCK_ARTIST: ArtistProfile = {
     {
       id: "3",
       platform: "YouTube Music",
-      url: "https://music.youtube.com/channel/UC3Q9KvTNrxwm3byUREgNAvA",
-      icon: "play-circle",
+      url: YOUTUBE_MUSIC_URL,
+      icon: "youtube",
       color: "hover:bg-[#FF0000]"
     },
     {
@@ -62,8 +72,8 @@ export const MOCK_ARTIST: ArtistProfile = {
   ],
   socials: [
     { id: "s1", platform: "instagram", url: "https://www.instagram.com/djbryanclub/" },
-    { id: "s2", platform: "tiktok", url: "https://vm.tiktok.com/ZSHKu2QfNjuKn-eYyy1/" },
-    { id: "s3", platform: "youtube", url: "https://youtube.com" },
+    { id: "s2", platform: "tiktok", url: TIKTOK_URL },
+    { id: "s3", platform: "youtube", url: YOUTUBE_MUSIC_URL },
     { id: "s4", platform: "whatsapp", url: `https://wa.me/5521965844958?text=${WHATSAPP_MESSAGE}` }
   ]
 };
